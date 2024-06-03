@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- FXML файл для головного вікна додатку -->
+<!-- Підключення необхідних бібліотек та ресурсів -->
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import java.net.URL?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.VBox?>
+
+<!-- Головний контейнер -->
+<StackPane prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/15.0.1"
+           xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.edu.coffee.MenuController">
+    <!-- Підключення стилів -->
+    <stylesheets>
+        <URL value="@style.css"/>
+    </stylesheets>
+    <!-- Головний контейнер VBox зі стилями "background" -->
+    <VBox alignment="TOP_CENTER" styleClass="background">
+        <!-- Верхній рядок кнопок -->
+        <HBox spacing="120" alignment="TOP_CENTER">
+            <!-- Кнопка "Меню" -->
+            <Button fx:id="menuButton"
+                    mnemonicParsing="false"
+                    styleClass="button" text="Меню"
+                    onAction="#menuButtonClicked"/>
+            <!-- Кнопка "Замовлення" -->
+            <Button fx:id="ordersButton"
+                    mnemonicParsing="false"
+                    styleClass="button"
+                    text="Замовлення"
+                    onAction="#ordersButtonClicked"/>
+            <!-- Кнопка "Черга" -->
+            <Button fx:id="queueButton"
+                    mnemonicParsing="false"
+                    styleClass="button"
+                    text="Черга"
+                    onAction="#queueButtonClicked"/>
+            <!-- Кнопка "Опції" -->
+            <Button fx:id="optionsButton"
+                    mnemonicParsing="false"
+                    styleClass="button"
+                    text="Опції"
+                    onAction="#optionsButtonClicked"/>
+        </HBox>
+        <!-- Рядок міток для повідомлень -->
+        <HBox spacing="10" alignment="CENTER_LEFT">
+            <!-- Ліва мітка для повідомлень -->
+            <Label fx:id="messageLabelLeft" styleClass="message-label-left"/>
+            <!-- Права мітка для повідомлень -->
+            <Label fx:id="messageLabelRight" styleClass="message-label-right"/>
+        </HBox>
+    </VBox>
+</StackPane>
